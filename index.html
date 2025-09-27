@@ -1,0 +1,43 @@
+<!-- index.html (更新后) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻宝大冒险</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🏺 寻宝大冒险 🏺</h1>
+        <div class="game-header">
+            <div class="game-status">准备开始探险...</div>
+            <div class="game-stats">
+                <div class="stat"><i class="fas fa-compass"></i> <span id="progress">进度: 0%</span></div>
+                <div class="stat"><i class="fas fa-star"></i> <span id="score">得分: 0</span></div>
+            </div>
+        </div>
+        <div class="game-map" id="gameMap"></div>
+        <div class="controls">
+            <button id="startButton" class="btn-primary">开始探险</button>
+            <button id="hintButton" class="btn-secondary" disabled>提示</button>
+        </div>
+        <div class="log-container" id="logContainer">
+            <h3>探险日志 <span id="logTimestamp"></span></h3>
+            <div id="adventureLog"></div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">游戏结果</h2>
+            <p id="modalMessage"></p>
+            <button id="modalButton" class="btn-primary">确定</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
